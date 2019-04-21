@@ -18,26 +18,15 @@ public Vestidor(List<String> torsos, List<String> piernas, List<String> pies) {
     this.pies = pies;
 } 
 
-
-public void combinar() {
-	this.validarPrendas();
-	
-}
-
-public void validarPrendas() {
-	
-	 if (torsos.isEmpty() || piernas.isEmpty() || pies.isEmpty())
-	 {	throw new ListInvalidException();
-	  }
-	this.realizarCombinacion();
-	 	 
-}
 	 
    public List<VestidorCombinacion> realizarCombinacion()
    {
+	   if (torsos.isEmpty() || piernas.isEmpty() || pies.isEmpty())
+		 {	throw new ListInvalidException();
+		  }
+	   
 	   ArrayList<VestidorCombinacion> vestidores = new ArrayList<VestidorCombinacion>();
-	     
-	   for(int i= 0; i< torsos.size(); i++) {
+	   	   for(int i= 0; i< torsos.size(); i++) {
 			for (int j= 0; j< piernas.size(); j++) {
 				for (int k= 0; k< pies.size(); k++) {
 		   VestidorCombinacion lst= new VestidorCombinacion(torsos.get(i),piernas.get(j),pies.get(k));

@@ -20,7 +20,7 @@ public class ExcepcionesTest {
 		pies.add("zapatilla");
 		
 	Vestidor vestidor = new Vestidor(torsos,piernas,pies);
-	vestidor.combinar();
+	vestidor.realizarCombinacion();
 	}
 	
 	
@@ -28,6 +28,6 @@ public class ExcepcionesTest {
 	public void testListVacias() throws Exception{
 		pies.add("zapatilla");
 	Vestidor vestidor = new Vestidor(torsos,piernas,pies);
-	vestidor.combinar();
+	vestidor.realizarCombinacion();
 	}
 }
